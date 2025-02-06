@@ -31,15 +31,19 @@
            - .	.probe: 建立匹配成功後要執行的函式
            - .	.remove: 建立關閉匹配後要執行函式
            - .	.id_table: 建立匹配表(name匹配)
-         ![ ](https://drive.google.com/uc?export=view&id=1zwT6Kdr7GYPdDT738ouOYQI9yVIhigzU)
-          ![ ](https://drive.google.com/uc?export=view&id=1_kYrTR3HHoKQGPqwBuhM7AFPcSZoWX1C)
+        	 ![ ](https://drive.google.com/uc?export=view&id=1zwT6Kdr7GYPdDT738ouOYQI9yVIhigzU)
+
+          	 ![ ](https://drive.google.com/uc?export=view&id=1_kYrTR3HHoKQGPqwBuhM7AFPcSZoWX1C)
 
       - 3. 實作.probe函式，創建字符設備
-      ![ ](https://drive.google.com/uc?export=view&id=187Qm587HIwHyGtWB8brAPIDK6Nj9LRgC)
+           
+      		 ![ ](https://drive.google.com/uc?export=view&id=187Qm587HIwHyGtWB8brAPIDK6Nj9LRgC)
 
       - 4. 實作i2c讀/寫函式
-    ![ ](https://drive.google.com/uc?export=view&id=1jstn2gajzVXfzsI7VIGISRq8re0xC7h6)
-    ![ ](https://drive.google.com/uc?export=view&id=1qCb0gEqBKjOA8p_HOGO2I-m_ktpY3er9)
+           
+    		 ![ ](https://drive.google.com/uc?export=view&id=1jstn2gajzVXfzsI7VIGISRq8re0xC7h6)
+
+   		 ![ ](https://drive.google.com/uc?export=view&id=1qCb0gEqBKjOA8p_HOGO2I-m_ktpY3er9)
 
 
   - I2C設備樹:
@@ -56,6 +60,7 @@
                                         reset-gpios = <&gpio5 9 GPIO_ACTIVE_LOW>;
                                         interrupt-gpios = <&gpio1 9 GPIO_ACTIVE_LOW>;
         ![ ](https://drive.google.com/uc?export=view&id=1r29yVvwVtUg8tWd3i-tYdtvmo7o9lpuy)
+        
         ![ ](https://drive.google.com/uc?export=view&id=1sWCteR22ClambM3-l3pqwvcQm6nkJ9Ix)
 
 
