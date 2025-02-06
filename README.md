@@ -31,4 +31,34 @@
            - .	.probe: 建立匹配成功後要執行的函式
            - .	.remove: 建立關閉匹配後要執行函式
            - .	.id_table: 建立匹配表(name匹配)
+         ![ ](https://drive.google.com/uc?export=view&id=1zwT6Kdr7GYPdDT738ouOYQI9yVIhigzU)
+          ![ ](https://drive.google.com/uc?export=view&id=1_kYrTR3HHoKQGPqwBuhM7AFPcSZoWX1C)
+
+      - 3. 實作.probe函式，創建字符設備
+      ![ ](https://drive.google.com/uc?export=view&id=187Qm587HIwHyGtWB8brAPIDK6Nj9LRgC)
+
+      - 4. 實作i2c讀/寫函式
+    ![ ](https://drive.google.com/uc?export=view&id=1jstn2gajzVXfzsI7VIGISRq8re0xC7h6)
+    ![ ](https://drive.google.com/uc?export=view&id=1qCb0gEqBKjOA8p_HOGO2I-m_ktpY3er9)
+
+
+  - I2C設備樹:
+      在對應的i2c節點下進行添加
+      - i2c引腳復位並使用該腳位設定                 pinctrl-0 = <&pinctrl_i2c2>;
+      - 添加外部設備節點，@後為外設地址       ft5426: ft5426@14
+      - 添加compatible屬性，供設備驅動匹配用compatible = "david,ft5426";
+      - 添加reg地址				          reg = <0x14>;
+      - 復位外設所需引腳(pintrl子系統)	          pinctrl-0 = <&pinctrl_tsc
+							                                  &pinctrl_tsc_reset>;
+      - 設定外設GPIO中斷				interrupt-parent = <&gpio1>;
+						                  interrupts = <9 0>;
+      - 設定外設使用GPIO子系統		
+                                        reset-gpios = <&gpio5 9 GPIO_ACTIVE_LOW>;
+                                        interrupt-gpios = <&gpio1 9 GPIO_ACTIVE_LOW>;
+        ![ ](https://drive.google.com/uc?export=view&id=1r29yVvwVtUg8tWd3i-tYdtvmo7o9lpuy)
+        ![ ](https://drive.google.com/uc?export=view&id=1sWCteR22ClambM3-l3pqwvcQm6nkJ9Ix)
+
+
+
+        
 
